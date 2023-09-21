@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg';
 
 import './assets/styles/App.css';
 
-import {addCount,subCount,resetCount} from './store/actions/counterAction'
+import { addCount, subCount, resetCount } from './store/actions/counterAction'
 
 
 function App() {
@@ -45,33 +45,36 @@ function App() {
 
       <div className="mt-8 card">
         <div className="count space-x-4">
-          <button onClick={()=>dispatch(subCount())} className="rounded-xl font-">-</button>
+          <button onClick={() => dispatch(subCount())} className="rounded-xl font-">-</button>
 
           <button
-            // disabled
             className="bg-gray-900 text-white px-4 py-2 rounded"
-            onClick={()=>dispatch(resetCount())}
+            onClick={() => dispatch(resetCount())}
           >
             Count is {count}
           </button>
 
-          <button onClick={()=>dispatch(addCount())} className="">+</button>
+          <button onClick={() => dispatch(addCount())} className="">+</button>
         </div>
 
-        <p className="mt-4 ">
-          {/* Developer {' '} */}
-          <span className=''>
-            <a target="_blank" href="https://github.com/stephen-nene">
-              <img
-                className='rounded-full w-32 h-39 inline-block mr-2'
-                alt='Stephen Nene'
-                src="https://avatars.githubusercontent.com/u/117808334?v=4"
-              />
-              {/* Stephen-nene */}
-            </a>
 
-          </span>
-        </p>
+        <div className='mt-4  rounded-lg shadow-md p-4 hover:shadow-lg '>
+          <h1 className='text-lg font-bold'>Developer/s</h1>
+          <a
+            target="_blank"
+            className='developer'
+            href="https://github.com/stephen-nene"
+          >
+            <img
+              className='rounded-full  hover:ring-4 hover:ring-rose-500 w-32 h-32 inline-block mr-2 shadow-lg'
+              alt='Stephen Nene'
+              src="https://avatars.githubusercontent.com/u/117808334?v=4"
+            />
+          </a>
+          <p>Stephen-nene</p>
+        </div>
+
+
       </div>
       <p className="mt-8 text-gray-500">
         Click on the logos to learn more
